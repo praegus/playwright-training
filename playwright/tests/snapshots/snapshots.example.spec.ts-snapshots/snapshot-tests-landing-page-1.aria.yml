@@ -1,0 +1,104 @@
+- navigation:
+  - link "Praegus Travels":
+    - /url: /
+    - img
+    - text: ""
+  - link "Home":
+    - /url: /
+  - link "Campsites":
+    - /url: /campsites
+  - link "API Docs":
+    - /url: /api-docs
+  - link "Assignments":
+    - /url: /assignments
+  - link "Add Campsite":
+    - /url: /campsites/new
+  - link "Chat":
+    - /url: /chat
+  - button "Toggle dark mode"
+- main:
+  - img "Hero background"
+  - heading "Find Your Perfect Campsite" [level=1]
+  - paragraph: Discover and book the best campsites for your next outdoor adventure. From mountain views to lakeside retreats, we've got you covered.
+  - link "Browse Campsites":
+    - /url: /campsites
+  - link "List Your Campsite":
+    - /url: /campsites/new
+  - heading "Featured Campsites" [level=2]
+  - img "Pine Valley Campground"
+  - text: /\$\d+\/night/
+  - heading "Pine Valley Campground" [level=3]
+  - img
+  - text: Yosemite National Park, CA
+  - img
+  - text: "Capacity: 6"
+  - link "View Details":
+    - /url: /campsites/1
+  - img "Lakeside Retreat"
+  - text: /\$\d+\/night/
+  - heading "Lakeside Retreat" [level=3]
+  - img
+  - text: Lake Tahoe, CA
+  - img
+  - text: "Capacity: 4"
+  - link "View Details":
+    - /url: /campsites/2
+  - img "Desert Oasis"
+  - text: /\$\d+\/night/
+  - heading "Desert Oasis" [level=3]
+  - img
+  - text: Joshua Tree National Park, CA
+  - img
+  - text: "Capacity: 8"
+  - link "View Details":
+    - /url: /campsites/3
+  - link "View All Campsites":
+    - /url: /campsites
+  - heading "Why Choose Us" [level=2]
+  - img
+  - heading "Easy to Find" [level=3]
+  - paragraph: Search and filter campsites based on location, price, and amenities to find your perfect match.
+  - img
+  - heading "Simple Booking" [level=3]
+  - paragraph: Our streamlined booking process makes it easy to reserve your campsite with just a few clicks.
+  - img
+  - heading "Verified Listings" [level=3]
+  - paragraph: All our campsites are verified to ensure you get exactly what you see in the listing.
+  - heading "Ready for Your Next Adventure?" [level=2]
+  - paragraph: Start planning your outdoor getaway today and find the perfect campsite for your needs.
+  - link "Explore Campsites":
+    - /url: /campsites
+- contentinfo:
+  - img
+  - text: Praegus Travels
+  - paragraph: Find and book your perfect campsite for your next outdoor adventure. We offer a wide selection of campsites across the country!
+  - link "Facebook":
+    - /url: "#"
+  - link "Twitter":
+    - /url: "#"
+  - link "Instagram":
+    - /url: "#"
+  - heading "Quick Links" [level=3]
+  - list:
+    - listitem:
+      - link "Home":
+        - /url: /
+    - listitem:
+      - link "Campsites":
+        - /url: /campsites
+    - listitem:
+      - link "Add Campsite":
+        - /url: /campsites/new
+  - heading "Contact" [level=3]
+  - paragraph: /\d+ Camping Way/
+  - paragraph: /Wilderness, CA \d+/
+  - paragraph:
+    - text: "Email:"
+    - link "info@campsitebooking.com":
+      - /url: mailto:info@campsitebooking.com
+  - paragraph:
+    - text: "Phone:"
+    - link /\(\d+\) \d+-\d+/:
+      - /url: tel:+11234567890
+  - paragraph: /© \d+ Praegus Travels\. All rights reserved\./
+  - paragraph: v0.1.0 (0ea88d68)

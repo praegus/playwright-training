@@ -1,0 +1,14 @@
+{
+  "id": 0,
+  "name": "Imported_name",
+  "location": "imported_location",
+  "description": "imported_test description",
+  "pricePerNight": "3",
+  "capacity": "3",
+  "amenities": "absolutely nothing",
+  "imageUrl": "",
+  "available": true,
+  "campsiteType": "Cabin",
+  "terrainType": "Mountain",
+  "accessibilityLevel": "ADA Accessible"
+}

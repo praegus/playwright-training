@@ -1,0 +1,30 @@
+- heading "Featured Campsites" [level=2]
+- img "Pine Valley Campground"
+# - text: /\$\d+\/night/
+- heading "Pine Valley Campground" [level=3]
+# - img
+# - text: Yosemite National Park, CA
+# - img
+# - text: "Capacity: 6"
+- link "View Details":
+  - /url: /campsites/1
+- img "Lakeside Retreat"
+- text: /\$\d+\/night/
+- heading "Lakeside Retreat" [level=3]
+# - img
+# - text: Lake Tahoe, CA
+# - img
+# - text: "Capacity: 4"
+- link "View Details":
+  - /url: /campsites/2
+- img "Desert Oasis"
+- text: /\$\d+\/night/
+- heading "Desert Oasis" [level=3]
+# - img
+# - text: Joshua Tree National Park, CA
+# - img
+# - text: "Capacity: 8"
+- link "View Details":
+  - /url: /campsites/3
+- link "View All Campsites":
+  - /url: /campsites
