@@ -12,8 +12,7 @@ const visual_user = 'visual_user'
 
 setup('authenticate standard user', async ({ page }) => {
   await page.goto(baseUrl)
-
-  await page.locator('[data-test="username"]').fill(standard_user)
+  await page.getByTestId('[data-test="username"]').fill(standard_user)
   await page.locator('[data-test="password"]').fill(password)
   await page.locator('[data-test="login-button"]').click()
 
