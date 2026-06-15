@@ -2,13 +2,23 @@
   "name": "1-recording-tests",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "e2e": "npx playwright test",
+    "e2e:ui": "npx playwright test --ui-host=0.0.0.0 --ui-port=8089",
+    "e2e:ci": "CI=true npx playwright test",
+    "lint:check": "prettier '**/*' --check --ignore-unknown",
+    "lint": "prettier '**/*' --write --ignore-unknown"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.2.3"
+    "@types/node": "^25.9.3",
+    "prettier": "^3.8.4"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }

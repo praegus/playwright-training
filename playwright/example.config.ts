@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test'
 
 export default defineConfig({
   // Folder containing tests
@@ -9,7 +9,7 @@ export default defineConfig({
 
   // Timeout for expect()
   expect: {
-    timeout: 5000,
+    timeout: 5000
   },
 
   // Run tests in files in parallel
@@ -25,10 +25,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
 
   // Reporter
-  reporter: [
-    ['html'],
-    ['list'],
-  ],
+  reporter: [['html'], ['list']],
 
   use: {
     // Base URL
@@ -56,7 +53,7 @@ export default defineConfig({
     actionTimeout: 0,
 
     // Navigation timeout
-    navigationTimeout: 30 * 1000,
+    navigationTimeout: 30 * 1000
   },
 
   // Multiple browser projects
@@ -64,38 +61,38 @@ export default defineConfig({
     {
       name: 'chromium',
       use: {
-        ...devices['Desktop Chrome'],
-      },
+        ...devices['Desktop Chrome']
+      }
     },
 
     {
       name: 'firefox',
       use: {
-        ...devices['Desktop Firefox'],
-      },
+        ...devices['Desktop Firefox']
+      }
     },
 
     {
       name: 'webkit',
       use: {
-        ...devices['Desktop Safari'],
-      },
+        ...devices['Desktop Safari']
+      }
     },
 
     // Mobile examples
     {
       name: 'Mobile Chrome',
       use: {
-        ...devices['Pixel 5'],
-      },
+        ...devices['Pixel 5']
+      }
     },
 
     {
       name: 'Mobile Safari',
       use: {
-        ...devices['iPhone 12'],
-      },
-    },
+        ...devices['iPhone 12']
+      }
+    }
   ],
 
   // Start local dev server before tests
@@ -103,9 +100,9 @@ export default defineConfig({
     command: 'npm run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
+    timeout: 120 * 1000
   },
 
   // Output folder
-  outputDir: 'test-results/',
-});
+  outputDir: 'test-results/'
+})
