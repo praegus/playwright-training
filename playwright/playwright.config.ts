@@ -20,10 +20,10 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    // ['html', { outputFolder: 'playwright-report' }],
+    ['html', { outputFolder: 'playwright-report' }],
     ['junit', { outputFile: 'test-results/junit.xml' }],
-    ['dot', {}]
-    // ['line']
+    ['dot', {}],
+    ['line']
   ],
   outputDir: 'test-results',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -51,12 +51,12 @@ export default defineConfig({
       use: {
         ...devices['Desktop Chrome'],
         // Use prepared auth state.
-        storageState: 'tests/.auth/standard-user.json',
+        // storageState: 'tests/.auth/standard-user.json',
         trace: 'on',
         video: 'on',
-        launchOptions: { headless: false, slowMo: 50 }
+        launchOptions: { headless: false, slowMo: 500 }
       },
-      dependencies: ['setup']
+      // dependencies: ['setup']
     }
   ]
 })
