@@ -26,7 +26,6 @@ setup('authenticate visual user', async ({ page }) => {
 })
 
 async function login(username: string, page: Page) {
-
   await page.locator('[data-test="username"]').fill(username)
   await page.locator('[data-test="password"]').fill(password)
   await page.locator('[data-test="login-button"]').click()

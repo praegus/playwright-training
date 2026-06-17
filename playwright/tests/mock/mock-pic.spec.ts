@@ -3,7 +3,6 @@ import fs from 'fs'
 import path from 'path'
 
 test.describe.serial('SauceDemo image mocking demo', () => {
-  
   test('1 - normal run (no mocking, inspect real images)', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/')
 
@@ -39,8 +38,5 @@ test.describe.serial('SauceDemo image mocking demo', () => {
     await page.pause()
 
     await expect(page).toHaveScreenshot('mocked-pictures.png')
-
-
   })
-
 })

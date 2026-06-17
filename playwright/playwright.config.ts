@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 import path from 'path'
 
 // Read from ".env" file.
-dotenv.config({ path: path.resolve(__dirname, '.env')})
+dotenv.config({ path: path.resolve(__dirname, '.env') })
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -22,7 +22,7 @@ export default defineConfig({
   reporter: [
     // ['html', { outputFolder: 'playwright-report' }],
     ['junit', { outputFile: 'test-results/junit.xml' }],
-    ['dot', {}],
+    ['dot', {}]
     // ['line']
   ],
   outputDir: 'test-results',
@@ -43,7 +43,7 @@ export default defineConfig({
         screenshot: 'off',
         video: 'off'
       },
-      outputDir: ""
+      outputDir: ''
     },
 
     {
@@ -53,7 +53,8 @@ export default defineConfig({
         // Use prepared auth state.
         storageState: 'tests/.auth/standard-user.json',
         trace: 'on',
-        launchOptions: {headless: false, slowMo: 50}
+        video: 'on',
+        launchOptions: { headless: false, slowMo: 50 }
       },
       dependencies: ['setup']
     }

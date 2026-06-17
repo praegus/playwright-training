@@ -1,6 +1,4 @@
 import { test, expect, Page } from '@playwright/test'
-import { info } from 'node:console'
-import { text } from 'node:stream/consumers'
 
 const baseUrl = process.env['BASE_URL'] || ''
 
