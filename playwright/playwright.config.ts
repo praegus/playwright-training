@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 import path from 'path'
 
 // Read from ".env" file.
-dotenv.config({ path: path.resolve(__dirname, '.env') , quiet: true})
+dotenv.config({ path: path.resolve(__dirname, '.env')})
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -52,7 +52,8 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         // Use prepared auth state.
         storageState: 'tests/.auth/standard-user.json',
-        trace: 'on'
+        trace: 'on',
+        launchOptions: {headless: false, slowMo: 50}
       },
       dependencies: ['setup']
     }

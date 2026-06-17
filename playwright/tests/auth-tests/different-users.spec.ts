@@ -4,7 +4,7 @@ const baseUrl = process.env['BASE_URL'] || ''
 
 test('price of first item', async ({ page }) => {
   await page.goto(`${baseUrl}/inventory.html`)
-
+  await page.pause()
   // expect the first item to be priced at 29.99
   await expect(
     page.locator('[data-test="inventory-item-description"]').first()
@@ -18,7 +18,7 @@ test.describe('visual user tests', () => {
   })
   test('price of first item is DIFFERENT', async ({ page }) => {
     await page.goto(`${baseUrl}/inventory.html`)
-
+    await page.pause()
     // expect the first item NOT to be priced at 29.99
     await expect(
       page.locator('[data-test="inventory-item-description"]').first()
