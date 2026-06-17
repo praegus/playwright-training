@@ -2,7 +2,6 @@ import { test as setup, expect, Page } from '@playwright/test'
 import path from 'path'
 
 const standardUserAuthFile = path.join(__dirname, '.auth/standard-user.json')
-
 const visualUserAuthFile = path.join(__dirname, '.auth/visual-user.json')
 
 const password = process.env['PASSWORD'] || ''

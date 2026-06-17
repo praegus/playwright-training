@@ -1,4 +1,6 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, Page } from '@playwright/test'
+import { info } from 'node:console'
+import { text } from 'node:stream/consumers'
 
 const baseUrl = process.env['BASE_URL'] || ''
 
@@ -7,9 +9,8 @@ test('price of first item', async ({ page }) => {
   await page.pause()
   // expect the first item to be priced at 29.99
   await expect(
-    page.locator('[data-test="inventory-item-description"]').first()
-    .locator('[data-test="inventory-item-price"]'))
-    .toContainText('29.99')
+    page.locator('[data-test="inventory-item-description"]').first().locator('[data-test="inventory-item-price"]')
+  ).toContainText('29.99')
 })
 
 test.describe('visual user tests', () => {
@@ -21,8 +22,15 @@ test.describe('visual user tests', () => {
     await page.pause()
     // expect the first item NOT to be priced at 29.99
     await expect(
-      page.locator('[data-test="inventory-item-description"]').first()
-      .locator('[data-test="inventory-item-price"]'))
-      .not.toContainText('29.99')
+      page.locator('[data-test="inventory-item-description"]').first().locator('[data-test="inventory-item-price"]')
+    ).not.toContainText('29.99')
+    let cpId = getTextContent(page, 'General Information', 'CP ID')
   })
 })
+
+async function getTextContent(page: Page, name: string, information: string) {
+  let box = page.locator('div.mx-layoutgrid.mx-layoutgrid-fluid', { hasText: name })
+  let informationblock = box.locator('div.mx-textbox.form-group.no-columns', { hasText: information })
+  let textContent = informationblock.locator('div').textContent()
+  return textContent
+}
